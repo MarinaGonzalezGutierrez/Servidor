@@ -15,3 +15,4 @@ var_dump($Media);
 //Mostrar el resultado
 echo "La media es :" .$media;
 ?>
+
