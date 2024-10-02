@@ -1,3 +1,7 @@
+<!-- Identificar entre dos números aleatorios cual es el mayor y si este es par o impar.
+Buscar información previamente para generar números aleatorios y usarla para
+resolver el ejercicio. -->
+
 <?php
 // Generar dos números aleatorios entre un rango (por ejemplo, entre 1 y 50)
 $num1 = rand(1,50);
