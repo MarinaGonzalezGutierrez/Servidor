@@ -1,4 +1,4 @@
-<!-- asignar nombres a animales -->
+<!-- asignar nombres a animales, se pueden poner comillas dobles o comillas simples -->
 <?php
  $mascotas = array('perro' => "Yunito",
  'gato' => "Wilson",
