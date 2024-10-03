@@ -7,17 +7,20 @@ columnas en las que figurarán los idiomas (0 = Inglés, 1 = Francés, 2 = Alem�
 
 <?php
 
-$niveles = array("Nivel basico", "Medio", "Perfeccionamiento");
-$idiomas = array("Ingles", "Francés", "Aleman", "Ruso");
-$matrizCompleta = {1, 14, 8, 3},
-{6, 19, 7, 2},
-{3, 13, 4, 1};
+$niveles = array('Nivel basico', 'Medio', 'Perfeccionamiento');
+$idiomas = array('Ingles', 'Francés', 'Aleman', 'Ruso');
+$matrizCompleta =array(
+array(1, 14, 8, 3),
+array(6, 19, 7, 2),
+array(3, 13, 4, 1)
+);
 $sumaColumnas = 0;
 for($i = 0; $i <3; $i++){
     echo "Nivel :".$nivel[$i]. "<br>";
     for($j = 0; $j <4; $j++){
-        echo "Idioma :".$idiomas[$j]. "<br>";
+        echo "Idioma :".$idiomas[$j]. " : ".$matriz[i][j]. " alumnos<br>";;
     }
+    echo "<br>";
    
 }
 
