@@ -37,4 +37,10 @@ que sean "Crovic", "Antic", "Malic", "Zulic" y "Rostrich". A continuación usand
 operador de concatenación haz que se muestre la frase: <<La alineación del
 equipo está compuesta por Crovic, Antic, Malic, Zulic y Rostrich.*/
 
+$jugador = array('Crovic', 'Antic', 'Malic', 'Zulic', 'Rostrich');
+echo "<br>";
+echo "d) La alineacion del equipo esta compuesta por ".$jugador['0']. ", ".$jugador['1']. ",".$jugador['2']. ",".$jugador['3']." y ".
+$jugador['4']. ".";
+
+/*
 ?>
