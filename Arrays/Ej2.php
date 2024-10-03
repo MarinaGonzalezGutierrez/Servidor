@@ -16,9 +16,9 @@ array(3, 13, 4, 1)
 );
 $sumaColumnas = 0;
 for($i = 0; $i <3; $i++){
-    echo "Nivel :".$nivel[$i]. "<br>";
+    echo "Nivel :".$niveles[$i]. "<br>";
     for($j = 0; $j <4; $j++){
-        echo "Idioma :".$idiomas[$j]. " : ".$matriz[i][j]. " alumnos<br>";;
+        echo "Idioma :".$idiomas[$j]. " : ".$matrizCompleta[$i][$j]. " alumnos<br>";;
     }
     echo "<br>";
    
