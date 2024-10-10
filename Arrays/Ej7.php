@@ -5,12 +5,14 @@ vectores a razón de uno por renglón. -->
 <?php
 $matrizCompleta = array();
 
+//cargar los aleatorios
 for($i=0; $i<3; $i++){
     for($j=0; $j<4; $j++){
         $matrizCompleta[$i][$j] = rand(0, 9);
     }
 }
 
+//mostrar la matriz
 for($i=0; $i<3; $i++){
     for($j=0; $j<4; $j++){
         echo $matrizCompleta[$i][$j]."\t";
@@ -18,7 +20,9 @@ for($i=0; $i<3; $i++){
     echo "<br/>";
 }
 
+//el maximo
 $vectorMaximo = array();
+$vectorPromedio = array();
 for($i=0; $i < 3; $i++){
     $maximo = $matrizCompleta[$i][0];
     for($j=0; $j < 4; $j++){
@@ -26,21 +30,28 @@ for($i=0; $i < 3; $i++){
             $maximo = $matrizCompleta[$i][$j];
         }
     }
-
-    $vectorMaximos[]= $maximo;
-}
-
-echo "Vector maximo:".$maximo;
-
-$vectorPromedio = array();
-for($i=0; $i < 3; $i++){
+    $vectorMaximo[]= $maximo;
+//el promedio
     $suma = 0;
-    for($j=0; $j < 4; $j++){
-        $suma = $suma + $matrizCompleta[$i][$j];
+    for($k=0; $k < 4; $k++){
+        $suma += $matrizCompleta[$i][$k];
     }
     $promedio = $suma / 4;
     $vectorPromedio[]= $promedio;
 }
-echo "Vector promedio:".$promedio;
+
+//mostrar resultados
+echo "Vector de máximos:\n";
+for($i=0; $i<3; $i++){
+    echo $vectorMaximo[$i]."\t";
+}
+echo "<br/>";
+
+echo "Vector de promedios:\n";
+for($i=0; $i<3; $i++){
+    echo $vectorPromedio[$i]."\t";
+}
+echo "<br/>";
+
 
 ?>
