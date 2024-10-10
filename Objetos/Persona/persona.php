@@ -9,7 +9,9 @@ class Persona {
         tengo ' . $this->edad . ' años ';
         }
 
-
+        public function __construct() {
+            echo 'Se acaba de crear el objeto persona --> <br/>';
+            }
 
 
 
