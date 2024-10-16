@@ -23,5 +23,7 @@ public function __toString() {
 return 'Color: ' . $this->color . ' Peso: ' . $this->peso;
 }
 
+
+
 }
 ?>
