@@ -29,12 +29,12 @@ unset($estadios_Futbol["Real Madrid"]); //unset: para eliminar un elemento del a
 echo "<br/>";
 echo "<br/>";
 echo "Eliminar real madrid: ";
-echo "<table border='1'>";
-echo "<tr><th>Índice</th><th>Valor</th></tr>";
+
+echo "<ol>";
 foreach ($estadios_Futbol as $indice => $valor) {
-    echo "<tr><td>$indice</td><td>$valor</td></tr>";
+    echo "<li>$indice: $valor</li>";
 }
-echo "</table>";
+echo "</ol>";
 
 
 ?>
