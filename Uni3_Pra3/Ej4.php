@@ -4,9 +4,22 @@ array original menores que el límite. -->
 
 <?php
 
-function arrayNumeros(){
-    
+//logica
+function filtrarMenores($array, $limite) {
+    $nuevoArray = array();
+    foreach ($array as $numero) {
+        if ($numero < $limite) {
+            $nuevoArray[] = $numero;
+        }
+    }
+    return $nuevoArray;
 }
+
+//array de numeros
+$array = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+$limite = 5;
+$nuevoArray = filtrarMenores($array, $limite);
+print_r($nuevoArray);
 
 
 
