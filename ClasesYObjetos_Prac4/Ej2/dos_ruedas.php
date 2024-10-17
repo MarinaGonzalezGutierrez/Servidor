@@ -3,7 +3,7 @@ require_once = "vehiculo.php";
 class Dos_ruedas extends Vehiculo{
 private $cilindrada;
 
-public function __construct($color, $peso, $num_puertas) {
+public function __construct($color, $peso, $cilindrada) {
     $this->cilindrada = $cilindrada;
     }
 
