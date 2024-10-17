@@ -1,0 +1,58 @@
+<?php
+if(isset ($POST['nombre'])){
+echo "Nombre ".$POST['nombre'];
+echo "Apellidos ".$POST['apellido'];
+}else{
+    /*
+    echo <<<_END
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="test.php" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellidos: </label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+_END;
+
+*/
+
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="test.php" method="get">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellidos: </label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+<?php 
+}
+
+?>
+
+
