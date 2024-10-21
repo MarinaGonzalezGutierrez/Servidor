@@ -1,5 +1,6 @@
 <?php
-echo "<form>";
+echo "<form method= 'GET' action= 'resultadoDinamico.php'>"; //mostrar
+
 for($i=0; $i<10; $i++){
     echo<<<_END
     <label for = "$i">$i:</label>
