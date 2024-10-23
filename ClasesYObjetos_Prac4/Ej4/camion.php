@@ -3,8 +3,8 @@ require_once ("cuatro_ruedas.php");
 class Camion extends Cuatro_ruedas{
 private $longitud;
 
-public function __construct($color, $peso, $longitud) {
-    parent::__construct($color, $peso, $numero_puertas);
+public function __construct($color, $peso, $longitud, $num_puertas) {
+    parent::__construct($color, $peso, $num_puertas);
     $this->longitud = $longitud;
     }
 
