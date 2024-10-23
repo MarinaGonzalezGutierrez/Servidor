@@ -1,5 +1,5 @@
 <?php
-require_once = "cuatro_ruedas.php";
+require_once ("cuatro_ruedas.php");
 class Camion extends Cuatro_ruedas{
 private $longitud;
 

@@ -32,11 +32,11 @@ public function circula(){
 }
 
 public function añadir_persona($peso_persona){
- B
+    $this->peso += $peso_persona;
 }
 
 public function __toString() {
-return 'Color: ' . $this->color . ' Peso: ' . $this->peso;
+return 'Peso y Color: '. $this->peso .' '. $this->color ;
 }
 
 //CLASE HIJA: primero required de la madre fuera y luego extends despues añadido a la clase
