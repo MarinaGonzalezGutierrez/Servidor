@@ -21,7 +21,8 @@ public function __construct($color, $peso, $num_puertas) {
             
             
      public function repintar($color){
-        $this->color = $color; //this-> color => para llamar al metodo de la clase padre
+        // $this->color = $color; //this-> color => para llamar al metodo de la clase padre
+        $this->set_color($color);
 
      }
 
