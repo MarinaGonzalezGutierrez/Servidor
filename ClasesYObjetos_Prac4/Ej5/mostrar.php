@@ -20,6 +20,11 @@ $dos_ruedas-> setCilindrada(1000);
 Vehiculo::ver_atributo($dos_ruedas);
 echo "<br>";
 
-
+//añadir camion
+$camion = new Camion("blanco", 6000, 4, 2);
+echo "El color es :".$camion -> getColor()."<br>";
+//persona de 84 kg
+$camion -> añadir_persona(84);
+echo "El peso es :".$camion -> getPeso()."kg <br>";
 
 ?>
