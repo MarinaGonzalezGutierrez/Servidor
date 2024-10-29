@@ -21,10 +21,14 @@ Vehiculo::ver_atributo($dos_ruedas);
 echo "<br>";
 
 //añadir camion
-$camion = new Camion("blanco", 6000, 4, 2);
-echo "El color es :".$camion -> getColor()."<br>";
+$camion = new Camion("blanco", 6000, 2, null);
 //persona de 84 kg
 $camion -> añadir_persona(84);
+$camion -> setColor("azul");
+echo "El color es :".$camion -> getColor()."<br>";
 echo "El peso es :".$camion -> getPeso()."kg <br>";
+echo "El numero de puertas :".$camion -> getNumero_puertas()."<br>";
+echo "La longitud es :".$camion -> getLongitud();
+
 
 ?>
