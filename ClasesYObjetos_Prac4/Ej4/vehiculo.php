@@ -10,22 +10,6 @@ $this->color = $color;
 $this->peso = $peso;
 }
 
-public function get_color(){
-    return $this->color;
-    }
-
-public function get_peso(){
-    return $this->peso;
-    }
-
-public function set_color($color){
-    $this->color = $color;
-    }   
-
-
-public function set_peso($peso){
-    $this->peso = $peso;
-    }  
 
 public function circula(){
     echo "El vehiculo circula.<br />";
@@ -40,6 +24,28 @@ return 'Peso y Color: '. $this->peso .' '. $this->color ;
 }
 
 //CLASE HIJA: primero required de la madre fuera y luego extends despues añadido a la clase
+
+
+public function getColor(){
+return $this->color;
+}
+
+
+public function setColor($color){
+$this->color = $color;
+return $this;
+}
+
+
+public function getPeso(){
+return $this->peso;
+}
+
+ 
+public function setPeso($peso){
+$this->peso = $peso;
+return $this;
+}
 
 
 }
