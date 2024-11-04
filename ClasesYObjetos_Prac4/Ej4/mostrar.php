@@ -15,6 +15,6 @@ echo "El color inicial del coche es :".$coche->get_color();
 $coche -> repintar("verde");
 echo "El color del coche es :".$coche->get_color();
 
-
+echo ""
 ?>
 
