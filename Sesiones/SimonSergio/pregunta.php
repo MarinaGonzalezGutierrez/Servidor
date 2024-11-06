@@ -36,7 +36,8 @@
         <input type="submit" value="yellow" name="tempColor">
     </form>
     <form action="comprobar.php" method="post">
-        <input type="hidden" name="resColor" value="<?php echo $tempColor;?>">
+        <!-- hidden para que te lo muestre vacio -->
+        <input type="hidden" name="resColor" value="<?php echo $tempColor;?>"> 
         <input type="submit" value="Enviar" name="submit">
     </form>
     
