@@ -88,7 +88,7 @@
         });
 
         // Reiniciar otras variables si es necesario (como un contador de pasos)
-        alert("El juego ha sido reiniciado.");
+        echo "El juego ha sido reiniciado!!";
     }
     </script>
 </body>
