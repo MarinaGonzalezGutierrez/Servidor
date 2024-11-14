@@ -4,7 +4,7 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 $binarios = [];
 
-//recorrer con for, dos 
+//recorrer con for, dos filas tres columnas
 for ($i = 0; $i < 2; $i++) {
     for ($j = 0; $j < 3; $j++) {
         $valor = $_POST["E$i.$j"];
