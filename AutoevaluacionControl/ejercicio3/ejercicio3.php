@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ES">
 <head>
     <meta charset="UTF-8">
     <title>Adivinar numero</title>
@@ -7,18 +7,23 @@
 <body>
 
 <?php
-session_start(); //Esta línea inicia la sesión en PHP
+//INICIO LA SESION
+session_start(); 
 
-if (!isset($_SESSION['miNumero'])) { //Aquí se verifica si existe la variable de sesión
-    $_SESSION["miNumero"] = rand(1, 100); 
-    $_SESSION['intentos'] = 0;
+//comprobar si el numero que estas introduciendo y subiendo en POST existe y llega
+if (!isset($_SESSION['miNumero'])) { 
+    $_SESSION["miNumero"] = rand(1, 100); //valores aleatorios
+
+    $_SESSION['intentos'] = 0; //inicializar los intentos en 0
 
 }
-
+//vemos si el metodo existe y lo coge bien
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    //vemos si existe el numero introducido
     if(isset($_POST['numIntroducir'])) {
         $numIntroducir = $_POST['numIntroducir'];
 
+        //vamos evaluando los numeros
         if ($numIntroducir < $_SESSION['miNumero']) {
             echo "El numero es mayor <br>";
             $_SESSION['intentos']++;
@@ -27,13 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['intentos']++;
         } else {
             echo "Enhorabuena, has acertado el numero en " . $_SESSION['intentos'] . " intentos";
-            session_destroy(); // Cierra la sesión
+            session_destroy(); 
         }
     }
 }
 ?>
 
 <label>Adivina mi numero:</label>
+<!-- Hacemos la caja para meter el numero -->
 <form method="POST" action="#"> 
     <input type="text" name="numIntroducir">
     <input type="submit" value="Enviar">

@@ -17,16 +17,16 @@ for ($i = 0; $i < 2; $i++) {
     }
 }
 
-// echo "<h2>Resultados en Binario:</h2>";
-//     echo "<table border='1'>";
-//     for ($i = 0; $i < 2; $i++) {
-//         echo "<tr>";
-//         for ($j = 0; $j < 3; $j++) {
-//             echo "<td>" . $binarios["E$i.$j"] . "</td>";
-//         }
-//         echo "</tr>";
-//     }
-//     echo "</table><br><br>";
+echo "<h2>Resultados en Binario:</h2>";
+    echo "<table border='1'>";
+    for ($i = 0; $i < 2; $i++) {
+        echo "<tr>";
+        for ($j = 0; $j < 3; $j++) {
+            echo "<td>" . $binarios["E$i.$j"] . "</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table><br><br>";
 }
 ?>
 
