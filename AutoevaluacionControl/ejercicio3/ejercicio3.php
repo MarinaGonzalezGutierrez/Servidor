@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <label>Adivina mi numero:</label>
-<form method="POST" action="Ej3.php"> 
+<form method="POST" action="#"> 
     <input type="text" name="numIntroducir">
     <input type="submit" value="Enviar">
 </form>
