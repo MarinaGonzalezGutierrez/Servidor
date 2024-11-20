@@ -21,28 +21,53 @@ for ($i=0; $i<4; $i++) {
 <h1>Adivina el numero decimal</h1>
 <h2>El numero en BINARIO: <?php foreach($bin as $num){echo $num;}?></h2>
 <?php
-        if($bin[0] == 1) {
-            echo "<img src='img/ocho.jpg'>";
-        } else {
-            echo "<img src='img/blanco.jpg'>";
-        }
+        // if($bin[0] == 1) {
+        //     echo "<img src='img/ocho.jpg'>";
+        // } else {
+        //     echo "<img src='img/blanco.jpg'>";
+        // }
  
-        if($bin[1] == 1) {
-            echo "<img src='img/cuatro.jpg'>";
-        } else {
-            echo "<img src='img/blanco.jpg'>";
-        }
+        // if($bin[1] == 1) {
+        //     echo "<img src='img/cuatro.jpg'>";
+        // } else {
+        //     echo "<img src='img/blanco.jpg'>";
+        // }
  
-        if($bin[2] == 1) {
-            echo "<img src='img/dos.jpg'>";
-        } else {
-            echo "<img src='img/blanco.jpg'>";
-        }
+        // if($bin[2] == 1) {
+        //     echo "<img src='img/dos.jpg'>";
+        // } else {
+        //     echo "<img src='img/blanco.jpg'>";
+        // }
  
-        if($bin[3] == 1) {
-            echo "<img src='img/uno.jpg'>";
-        } else {
-            echo "<img src='img/blanco.jpg'>";
+        // if($bin[3] == 1) {
+        //     echo "<img src='img/uno.jpg'>";
+        // } else {
+        //     echo "<img src='img/blanco.jpg'>";
+        // }
+
+        for ($i=4; $i >= 0; $i--) { 
+            $potencias[$i]=2**$i;
+        }
+       
+        for ($i=3; $i >= 0; $i--) { 
+            if($num[$i]==1){
+                    switch ($potencias[$i]) {
+                        case 1:
+                            echo '<img src="Uno.jpg">';
+                            break;
+                            case 2:
+                                echo '<img src="dos.jpg">';
+                                break;
+                                case 4:
+                                    echo '<img src="cuatro.jpg">';
+                                    break;
+                                    case 8:
+                                        echo '<img src="ocho.jpg">';
+                                        break;
+                    }
+            }else{
+                echo '<img src="blanco.jpg">';
+            }
         }
  
     ?>
