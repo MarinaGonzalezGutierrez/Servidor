@@ -11,6 +11,6 @@ if($usu == $_POST['usuario'] && $contra == $_POST['contrasena']){
     echo "Acceso denegado!!";
 }
 
-// if($_POST[''])
+if($_POST[''])
 
 ?>
