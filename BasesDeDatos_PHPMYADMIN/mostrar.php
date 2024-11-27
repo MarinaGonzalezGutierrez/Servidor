@@ -1,6 +1,6 @@
 <?php // query-mysqli.php
  require_once 'login.php';
- $connection = new mysqli($hn, $un, $pw, $db, 3307);
+ $connection = new mysqli($hn, $un, $pw, $db, 3307); //puerto
  if ($connection->connect_error) die("Fatal Error");
  $query = "SELECT * FROM usuarios";
  $result = $connection->query($query);
