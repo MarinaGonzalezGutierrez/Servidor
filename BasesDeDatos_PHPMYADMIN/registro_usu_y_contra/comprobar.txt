@@ -1,0 +1,4 @@
+$usuario = $_POST['usuario];
+SELECT usuario, password FROM usuarios
+WHERE usuario = '$usuario'
+AND password = '$password'
