@@ -7,9 +7,9 @@ if ($conn->connect_error) die("Error de conexión: " . $conn->connect_error);
 
 if (isset($_POST['usu']) && isset($_POST['pass']))
 {
-    $usuario = $_POST['usu']; 
-    $contra = $_POST['pass'];
-    $query ="SELECT Usu, contra FROM usuarios WHERE Usu='$usuario' AND contra='$contra'";
+    $Usu = $_POST['usu']; 
+    $Contra = $_POST['pass'];
+    $query ="SELECT Usu, contra FROM usuarios WHERE Usu='$Usu' AND contra='$Contra'";
     $result = $conn->query($query); 
     if (!$result) echo "INSERT failed<br><br>"; 
     if ($result && $result->num_rows > 0) {
