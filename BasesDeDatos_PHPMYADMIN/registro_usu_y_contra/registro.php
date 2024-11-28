@@ -4,8 +4,8 @@ require_once 'login.php';
 $conn = new mysqli($hn,$un,$pw,$db,3307); 
 if ($conn->connect_error) die("Error de conexión: " . $conn->connect_error);
 
-if (isset($_POST['usu']) && isset($_POST['contra']))
-{
+if (isset($_POST['usu']) && isset($_POST['contra'])){
+
     $usuario = $_POST['usu']; 
     $contra = $_POST['contra']; 
     $rol = $_POST['rol'];
@@ -20,7 +20,11 @@ if (isset($_POST['usu']) && isset($_POST['contra']))
         echo"por favor complete correctamente el registro";
     }
 
- 
+ //comprobación de la contraseña, y comprobar que el usuario no existe
+ if($contra == $conf){
+    
+ }
+
 ?>
 
 <!DOCTYPE html>
