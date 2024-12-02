@@ -13,7 +13,8 @@ if (isset($_POST['usuario']) && isset($_POST['clave']))
     if (!$result) echo "INSERT failed<br><br>"; 
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        echo "Bienvenido, " . htmlspecialchars($row['Usu']) . "!<br>"; 
+        echo "Bienvenido, " . htmlspecialchars($row['Nombre']) . "!<br>"; 
+        // <a href="index.php">Empieza a jugar</a>
     } else {
         echo "Usuario o contraseña incorrectos.<br>";
     }
