@@ -21,9 +21,7 @@ if (isset($_POST['usu']) && isset($_POST['contra'])){
     }
 
  //comprobación de la contraseña, y comprobar que el usuario no existe
- if($contra == $conf){
-    
- }
+
 
 ?>
 
