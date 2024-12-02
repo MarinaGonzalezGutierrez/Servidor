@@ -13,8 +13,10 @@ if (isset($_POST['usuario']) && isset($_POST['clave']))
     if (!$result) echo "INSERT failed<br><br>"; 
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
+        //para poder entrar en el juego y que te pinte los circulos directamente
         echo "Bienvenido, " . htmlspecialchars($row['Nombre']) . "!<br>"; 
-        // <a href="index.php">Empieza a jugar</a>
+        
+        header ('Location: inicio.php'); 
     } else {
         echo "Usuario o contraseña incorrectos.<br>";
     }
