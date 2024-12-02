@@ -46,6 +46,9 @@ function color() {
     </style>
 </head>
 <body>
+    <h1> SIMON </h1>
+    <?php  echo "Hola ". $_SESSION['usuario']. " memoriza la combinacion." ;?>
+    <br>
     <div class="circulos">
     <?php $_SESSION["solucion"] = pintar_circulos(color(),color(),color(),color());?>
     </div>
