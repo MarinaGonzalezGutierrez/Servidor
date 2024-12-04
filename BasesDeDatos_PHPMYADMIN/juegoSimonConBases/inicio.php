@@ -32,18 +32,7 @@ function color() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .circulos {
-            display: flex;
-        }
-        .circulo {
-            width: 100px;       
-            height: 100px;      
-            border-radius: 50%; 
-            
-        }
-        
-    </style>
+  
 </head>
 <body>
     <h1> SIMON </h1>
@@ -53,7 +42,7 @@ function color() {
     <?php $_SESSION["solucion"] = pintar_circulos(color(),color(),color(),color());?>
     </div>
     <br>
-    <form action="preguntar.php" method="post">
+    <form action="jugar.php" method="post">
         
         <input type="submit" value="Jugar" name="submit">
     </form>
