@@ -39,11 +39,12 @@ function color() {
     <?php  echo "Hola ". $_SESSION['usuario']. " memoriza la combinacion." ;?>
     <br>
     <div class="circulos">
-    <?php $_SESSION["solucion"] = pintar_circulos(color(),color(),color(),color());?>
+    <?php $_SESSION["solucion"] = pintar_circulos(color(),color(),color(),color());
+      ?>
     </div>
     <br>
     <form action="jugar.php" method="post">
-        
+        <?php $_SESSION['pulsaciones'] = 0; ?>
         <input type="submit" value="Jugar" name="submit">
     </form>
     
