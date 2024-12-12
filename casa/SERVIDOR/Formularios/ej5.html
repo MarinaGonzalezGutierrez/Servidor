@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con Vector y Suma</title>
+</head>
+<body>
+
+<?php
+// Revisamos si el formulario ha sido enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Inicializamos un array para almacenar los valores y la variable de suma
+    $valores = [];
+    $suma = 0;
+
+    // Recibimos los valores de las cajas de texto, los convertimos a enteros y calculamos la suma
+    for ($i = 0; $i < 9; $i++) {
+        $valor = isset($_POST["valor$i"]) ? (int)$_POST["valor$i"] : 0;
+        $valores[] = $valor;
+        $suma += $valor;
+    }
+
+    // Mostramos los valores ingresados y la suma
+    echo "<h3>Vector de elementos (9 elementos):</h3>";
+    echo "<ul>";
+    foreach ($valores as $indice => $valor) {
+        echo "<li>Elemento $indice: $valor</li>";
+    }
+    echo "</ul>";
+    echo "<p><strong>Suma total:</strong> $suma</p>";
+}
+?>
+
+<!-- Formulario con 9 cajas de texto -->
+<form method="post" action="">
+    <?php for ($i = 0; $i < 9; $i++): ?>
+        <label for="valor<?php echo $i; ?>">Valor <?php echo $i; ?>: </label>
+        <input type="text" name="valor<?php echo $i; ?>" id="valor<?php echo $i; ?>" value="" /><br/>
+    <?php endfor; ?>
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
