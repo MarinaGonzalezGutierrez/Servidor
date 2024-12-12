@@ -1,22 +1,24 @@
 <?php
 //siempre iniciamos sesion
     session_start();
-    // if (isset($_POST['input'])) {
+    require_once("login.php");
+    $fechaEstablecida = date('Y-m-d');
+    $usu = $_SESSION['usu'];
+    $connection = new mysqli($hn, $un, $pw, $db);
+    if ($connection->connect_error) die("Fatal Error");
+    // if(!isset($_SESSION['login'])){
+    //     header("inicio.php");
         
-    //     if ($_POST['input'] == "INCREMENTAR" && $_SESSION['contador']<4) {
-    //         $_SESSION['contador']++;
-    //     } else if ($_SESSION['contador']>=4) {
-    //         echo<<<_END
-    //             <meta http-equiv="refresh" content="0;URL='agenda.php'" />
-    //         _END;
-    //     } else {
-    //         echo<<<_END
-    //             <meta http-equiv="refresh" content="0;URL='agenda.php'" />
-    //         _END;
-    //     }
-    // } else {
-    //     $_SESSION['contador'] = 0;
     // }
+$_SESSION['respuesta'] = [];
+if(isset($_SESSION['solu'])){
+    $_SESSION['solu'] = '';
+    $solu = $_SESSION['solu'];
+        $query = "INSERT INTO solucion (fecha, solucion) VALUES ($fechaEstablecida, $solu)";
+}
+
+   
+  
 ?>
 
 <!DOCTYPE html>
@@ -27,21 +29,22 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Bienvenido <?php echo  $_SESSION['usu'];?> !!</p>
-    <h1>GEROGLÍFICO</h1>
+    <p>Bienvenido, <?php echo  $_SESSION['usu'];?> !!</p>
     <!-- Aplicamos estilos de la tabla -->
-    <div style="border: 4px double; width:40%;">
-        <!-- para mostrar el nombre d usuario, con la variable de session almacenamos usuarios -->
-        
-       
-    </div>
     <div>
-       <img src= "img/20241212.jpg" />
+       <img src= "img/20241212.jpg" width= "200" height="200" />
     </div>
     <form method="post" action="#">
-        <!-- Cajas de texto de incrementar y grabar -->
-    <input type="submit" value="INCREMENTAR" name="input">
-    <input type="submit" value="GRABAR" name="input">
+       <!-- Boton enviar -->
+        <br>
+    <label for="solu">Solucion al jeroglifico :</label>
+    <input type="text" id="solu" name="solu" required>
+    <br>
+    <input type="submit" value="Enviar" name="input">
+    <br>
+    <br>
+    <a href="resultado.php">Ver puntos por jugador</a><br>
+    <a href="puntos.php">Resultados del dia</a><br>
     </form>
 </body>
 </html>
