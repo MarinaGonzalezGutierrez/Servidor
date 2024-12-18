@@ -1,0 +1,7 @@
+Hacer un arbol de navidad
+Ultima fila= 4 imagenes navideñas
+****= 3 imagenes
+****= 2 imagenes
+****= 1 imagenes
+
+subir imagenes fichero

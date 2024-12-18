@@ -1,0 +1,19 @@
+<!-- Creamos un formulario HTML que permiten a los usuarios elegir el archivo de imagen
+que desea cargar: file_uploads = On
+Entrar en xammp en config php ini, control b, y buscar si esta encendido
+-->
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- formulario normal, que te lleva al archivo upload.php 
+     multipart/form-data es pa los tipos d archivos
+     -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+Seleccionar un fichero:
+<!-- aqui escoges el archivo -->
+<input type="file" name="archivoSubir" id="archivoSubir">
+<!-- aqui lo subes -->
+<input type="submit" value="Subir imagen" name="submit">
+</form>
+</body>
+</html>
