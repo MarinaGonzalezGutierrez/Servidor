@@ -36,3 +36,4 @@ if($tipoExtension != "txt" ) {
  echo "Lo siento, solo el tipo txt esta permitido.";
  $booleano = 0;
 }
+?>
